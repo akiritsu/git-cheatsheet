@@ -1,8 +1,124 @@
-# git-cheatsheet
+## 简便的 Git 命令备忘卡
 
+<table style="table-layout:fixed;">
+  <tr>
+    <th colspan="2">1.新建仓库</th>
+  </tr>
+  <tr>
+    <td>初始化一个本机仓库</td>
+    <td>git init</td>
+  </tr>
+  <tr>
+    <td>和Github上的远程仓库url关联</td>
+    <td>git remote add origin &lt;url&gt;</td>
+  </tr>
+  <tr>
+    <td>更改仓库的url</td>
+    <td>git remote set-url origin &lt;url&gt;</td>
+  </tr>
+  <tr>
+    <td>下载远程仓库到本机</td>
+    <td>git clone &lt;url&gt; &lt;path&gt;</td>
+  </tr>
+  <tr>
+    <td>查看仓库的url</td>
+    <td>git remote -v</td>
+  </tr>
+  <tr>
+    <th colspan="2">2.更新及推送</th>
+  </tr>
+  <tr>
+    <td>跟踪所有已更改文件</td>
+    <td>git add .</td>
+  </tr>
+  <tr>
+    <td>删除文件</td>
+    <td>git rm &lt;filename&gt;</td>
+  </tr>
+  <tr>
+    <td>跟踪并提交所有已更改文件</td>
+    <td>git commit -am &lt;commit message&gt;</td>
+  </tr>
+  <tr>
+    <td>推送至远程仓库</td>
+    <td>git push origin &lt;branch name&gt;</td>
+  </tr>
+  <tr>
+    <td>更新到本地</td>
+    <td>git pull</td>
+  </tr>
+  <tr>
+    <th colspan="2">3.分支管理</th>
+  </tr>
+  <tr>
+    <td>新建分支</td>
+    <td>git branch &lt;branch name&gt;</td>
+  </tr>
+  <tr>
+    <td>切换到分支</td>
+    <td>git checkout &lt;branch name&gt;</td>
+  </tr>
+  <tr>
+    <td>新建并切换到分支</td>
+    <td>git checkout -b &lt;branch name&gt;</td>
+  </tr>
+  <tr>
+    <td>查看所有分支</td>
+    <td>git branch</td>
+  </tr>
+  <tr>
+    <td>将分支合并到主分支</td>
+    <td>git checkout master &amp;&amp; git merge &lt;branch name&gt;</td>
+  </tr>
+  <tr>
+    <td>从远程仓库更新分支</td>
+    <td>git pull orgin &lt;branch name&gt;</td>
+  </tr>
+  <tr>
+    <th colspan="2">4.日志及历史管理</th>
+  </tr>
+  <tr>
+    <td>查看所有日志</td>
+    <td>git log</td>
+  </tr>
+  <tr>
+    <td>回退至某历史版本</td>
+    <td>git checkout &lt;commit code&gt;</td>
+  </tr>
+  <tr>
+    <td>回退并更改后，强制推送至远程仓库</td>
+    <td>git push -f origin master</td>
+  </tr>
+  <tr>
+    <td>合并n个本地提交</td>
+    <td>git rebase -i HEAD~&lt;n&gt;</td>
+  </tr>
+  <tr>
+    <td>更改提交信息</td>
+    <td>git commit -amend</td>
+  </tr>
+  <tr>
+    <td>查看更改文件的列表</td>
+    <td>git status</td>
+  </tr>
+  <tr>
+    <td>对比文件更改</td>
+    <td>git diff --stat</td>
+  </tr>
+  <tr>
+    <th colspan="2">5.当前库中检索</th>
+  </tr>
+  <tr>
+    <td>显示关键字的行号</td>
+    <td>git grep -n &lt;keyword&gt;</td>
+  </tr>
+  <tr>
+    <td>显示在文件的出现次数</td>
+    <td>git grep -c &lt;keyword&gt;</td>
+  </tr>
+</table>
 
-A useful and brief Git cheatsheet.
-
+## English Version
 
 <table style="table-layout:fixed;">
   <tr>
@@ -162,124 +278,5 @@ A useful and brief Git cheatsheet.
   </tr>
   <tr>
     <td>git push origin &lt;branch name&gt;</td>
-  </tr>
-</table>
-
-Chinese Version:
-<table style="table-layout:fixed;">
-  <tr>
-    <th colspan="2">1.新建仓库</th>
-  </tr>
-  <tr>
-    <td>初始化一个本机仓库</td>
-    <td>git init</td>
-  </tr>
-  <tr>
-    <td>和Github上的远程仓库url关联</td>
-    <td>git remote add origin &lt;url&gt;</td>
-  </tr>
-  <tr>
-    <td>更改仓库的url</td>
-    <td>git remote set-url origin &lt;url&gt;</td>
-  </tr>
-  <tr>
-    <td>下载远程仓库到本机</td>
-    <td>git clone &lt;url&gt; &lt;path&gt;</td>
-  </tr>
-  <tr>
-    <td>查看仓库的url</td>
-    <td>git remote -v</td>
-  </tr>
-  <tr>
-    <th colspan="2">2.更新及推送</th>
-  </tr>
-  <tr>
-    <td>跟踪所有已更改文件</td>
-    <td>git add .</td>
-  </tr>
-  <tr>
-    <td>删除文件</td>
-    <td>git rm &lt;filename&gt;</td>
-  </tr>
-  <tr>
-    <td>跟踪并提交所有已更改文件</td>
-    <td>git commit -am &lt;commit message&gt;</td>
-  </tr>
-  <tr>
-    <td>推送至远程仓库</td>
-    <td>git push origin &lt;branch name&gt;</td>
-  </tr>
-  <tr>
-    <td>更新到本地</td>
-    <td>git pull</td>
-  </tr>
-  <tr>
-    <th colspan="2">3.分支管理</th>
-  </tr>
-  <tr>
-    <td>新建分支</td>
-    <td>git branch &lt;branch name&gt;</td>
-  </tr>
-  <tr>
-    <td>切换到分支</td>
-    <td>git checkout &lt;branch name&gt;</td>
-  </tr>
-  <tr>
-    <td>新建并切换到分支</td>
-    <td>git checkout -b &lt;branch name&gt;</td>
-  </tr>
-  <tr>
-    <td>查看所有分支</td>
-    <td>git branch</td>
-  </tr>
-  <tr>
-    <td>将分支合并到主分支</td>
-    <td>git checkout master &amp;&amp; git merge &lt;branch name&gt;</td>
-  </tr>
-  <tr>
-    <td>从远程仓库更新分支</td>
-    <td>git pull orgin &lt;branch name&gt;</td>
-  </tr>
-  <tr>
-    <th colspan="2">4.日志及历史管理</th>
-  </tr>
-  <tr>
-    <td>查看所有日志</td>
-    <td>git log</td>
-  </tr>
-  <tr>
-    <td>回退至某历史版本</td>
-    <td>git checkout &lt;commit code&gt;</td>
-  </tr>
-  <tr>
-    <td>回退并更改后，强制推送至远程仓库</td>
-    <td>git push -f origin master</td>
-  </tr>
-  <tr>
-    <td>合并n个本地提交</td>
-    <td>git rebase -i HEAD~&lt;n&gt;</td>
-  </tr>
-  <tr>
-    <td>更改提交信息</td>
-    <td>git commit -amend</td>
-  </tr>
-  <tr>
-    <td>查看更改文件的列表</td>
-    <td>git status</td>
-  </tr>
-  <tr>
-    <td>对比文件更改</td>
-    <td>git diff --stat</td>
-  </tr>
-  <tr>
-    <th colspan="2">5.当前库中检索</th>
-  </tr>
-  <tr>
-    <td>显示关键字的行号</td>
-    <td>git grep -n &lt;keyword&gt;</td>
-  </tr>
-  <tr>
-    <td>显示在文件的出现次数</td>
-    <td>git grep -c &lt;keyword&gt;</td>
   </tr>
 </table>
